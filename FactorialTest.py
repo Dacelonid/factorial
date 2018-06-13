@@ -22,6 +22,9 @@ class MyTestCase(unittest.TestCase):
     def test_factorial_negative_number_expect_exception(self):
         self.assertRaises(ValueError, lambda: Factorial.factorial(-1))
 
+    def test_factorial_not_a_number_expect_exception(self):
+        self.assertRaises(ValueError, lambda: Factorial.factorial("a"))
+
 
 if __name__ == '__main__':
     unittest.main()
